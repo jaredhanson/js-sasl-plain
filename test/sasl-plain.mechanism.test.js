@@ -11,12 +11,16 @@
   describe('Mechanism', function() {
     var mech = new Mechanism();
     
-    it('shoud be named PLAIN', function() {
+    it('should be named PLAIN', function() {
       expect(mech.name).to.equal('PLAIN');
     });
     
-    it('shoud encode credentials', function() {
+    it('should encode credentials', function() {
       expect(mech.encode({ username: 'johndoe', password: 'secret' })).to.equal('\u0000johndoe\u0000secret');
+    });
+    
+    it('should encode credentials with authzid', function() {
+      expect(mech.encode({ username: 'Kurt', password: 'xipj3plmq', authzid: 'Ursel' })).to.equal('Ursel\u0000Kurt\u0000xipj3plmq');
     });
     
   });
