@@ -37,7 +37,7 @@ test-phantomjs:
 #
 test-cloud: test-saucelabs
 test-saucelabs:
-	node test/cloud/client.js
+	clear && node test/cloud/terminal.js
 
 
 # ==============================================================================
