@@ -64,4 +64,4 @@ lint:
 	$(JSHINT) $(SOURCES)
 
 
-.PHONY: test-browser test-phantomjs
+.PHONY: test test-chrome test-firefox test-safari test-phantomjs test-cloud test-saucelabs test-node hint lint
