@@ -23,9 +23,12 @@
   ],
   "main": "main",
   "devDependencies": {
+    "express": "3.x.x",
     "mocha": "1.x.x",
+    "chai": "1.x.x",
     "mocha-phantomjs": "1.x.x",
-    "chai": "1.x.x"
+    "mocha-cloud": "0.0.1",
+    "mocha-cloud-grid-view": "0.0.1"
   },
   "volo": {
     "dependencies": {

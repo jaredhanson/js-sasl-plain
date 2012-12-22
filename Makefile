@@ -29,6 +29,16 @@ test-safari:
 test-phantomjs:
 	$(MOCHA_PHANTOMJS) $(WWW_TESTS)
 
+# Prior to running tests on Sauce Labs, ensure that a local server is listening
+# and Sauce Connect is tunneling requests to it.
+#
+#     $ java -jar Sauce-Connect.jar $SAUCE_LABS_USERNAME $SAUCE_LABS_ACCESS_KEY
+#     $ node test/cloud/server.js
+#
+test-cloud: test-saucelabs
+test-saucelabs:
+	node test/cloud/client.js
+
 
 # ==============================================================================
 # Node Tests

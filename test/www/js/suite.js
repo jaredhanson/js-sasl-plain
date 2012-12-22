@@ -1,7 +1,8 @@
-require(['require',
-         'mocha',
-         'chai'],
-function(require, mocha, chai) {
+define(['require',
+        'mocha',
+        'chai',
+        'mocha-cloud'],
+function(require, mocha, chai, cloud) {
   mocha.setup('bdd');
   expect = chai.expect
   
@@ -9,6 +10,6 @@ function(require, mocha, chai) {
            'test/sasl-plain.mechanism.test'],
   function() {
     if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
-    else { mocha.run(); }
+    else { cloud(mocha.run()); }
   });
 });

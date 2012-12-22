@@ -1,11 +1,13 @@
 require.config({
+  baseUrl: 'js/lib',
   paths: {
-    'test': '../..',
-    'mocha': 'lib/mocha/mocha',
-    'chai': 'lib/chai/chai'
+    'test': '../../..',
+    'mocha': 'mocha/mocha',
+    'chai': 'chai/chai'
   },
   packages: [
-    { name: 'sasl-plain', location: '../../..' }
+    { name: 'sasl-plain', location: '../../../..' },
+    { name: 'mocha-cloud', location: '../support', main: 'mocha-cloud' }
   ],
   shim: {
     'mocha': {
@@ -14,4 +16,4 @@ require.config({
   }
 });
 
-require(['suite']);
+require(['../suite']);
