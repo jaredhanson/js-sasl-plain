@@ -15,6 +15,10 @@
       expect(mech.name).to.equal('PLAIN');
     });
     
+    it('should be client first', function() {
+      expect(mech.clientFirst).to.equal(true);
+    });
+    
     it('should encode credentials', function() {
       expect(mech.response({ username: 'johndoe', password: 'secret' })).to.equal('\u0000johndoe\u0000secret');
     });
