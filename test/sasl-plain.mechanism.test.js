@@ -16,11 +16,11 @@
     });
     
     it('should encode credentials', function() {
-      expect(mech.encode({ username: 'johndoe', password: 'secret' })).to.equal('\u0000johndoe\u0000secret');
+      expect(mech.response({ username: 'johndoe', password: 'secret' })).to.equal('\u0000johndoe\u0000secret');
     });
     
     it('should encode credentials with authzid', function() {
-      expect(mech.encode({ username: 'Kurt', password: 'xipj3plmq', authzid: 'Ursel' })).to.equal('Ursel\u0000Kurt\u0000xipj3plmq');
+      expect(mech.response({ username: 'Kurt', password: 'xipj3plmq', authzid: 'Ursel' })).to.equal('Ursel\u0000Kurt\u0000xipj3plmq');
     });
     
   });
