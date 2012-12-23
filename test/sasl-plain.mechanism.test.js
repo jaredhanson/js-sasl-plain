@@ -23,6 +23,10 @@
       expect(mech.response({ username: 'Kurt', password: 'xipj3plmq', authzid: 'Ursel' })).to.equal('Ursel\u0000Kurt\u0000xipj3plmq');
     });
     
+    it('should have challenge function', function() {
+      expect(mech.challenge).to.be.a('function');
+    });
+    
   });
   
   return { name: 'test.sasl-plain.mechanism' };
