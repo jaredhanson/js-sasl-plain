@@ -31,6 +31,10 @@
       expect(mech.challenge).to.be.a('function');
     });
     
+    it('should have chainable challenge function', function() {
+      expect(mech.challenge()).to.equal(mech);
+    });
+    
   });
   
   return { name: 'test.sasl-plain.mechanism' };
